@@ -1,0 +1,135 @@
+import java.util.*
+fun main() {
+    val c1 = 'a'
+    val c2 = 'd'
+    val c3 = 'c'
+    val c4 = 'd'
+    
+    println(c1.toInt())
+    println(c2.toInt())
+    println(c3.toInt())
+    println(c4.toInt())
+    println("----------")
+    
+    var num1=2
+    var num2=4
+    val temp:Int;
+
+    println("before: ");
+    println("num1: $num1 num2: $num2");
+    temp=num1;
+    num1=num2;
+    num2=temp;
+    println("after: ");
+    println("num1: $num1 num2: $num2");
+
+    //without third variable
+    var n1=3;
+    var n2=7;
+
+    println("before: ");
+    println("n1: $n1 n2: $n2");
+    n1=n1+n2;
+    n2=n1-n2;
+    n1=n1-n2;
+    println("after: ");
+    println("n1: $n1 n2: $n2");
+    println("----------")
+    
+    var fact=1;
+    println("Enter a number for finding factorial: ");
+    val sc=Scanner(System.`in`)
+    var number=sc.nextInt()
+    for (i in 1..number)
+    {
+        fact=fact*i;
+    }
+    println("Factorial of $number is: $fact");
+
+    // 4. Java Program to Generate Multiplication Table (user will enter number, end number of table)
+    println("Enter a number for multiplication table: ");
+    val multiNum=sc.nextInt();
+    for(j in 1..10)
+    {
+        println("$multiNum x $j=${multiNum*j}");
+    }
+
+    // 5. Java Program to Reverse a Number
+    var rem=0
+    var dummy=0
+    var rev=0;
+    var orgNo=65;
+    dummy=orgNo;
+    while(orgNo!=0)
+    {
+        rem=orgNo%10;
+        rev=(rev*10)+rem;
+        orgNo=orgNo/10;
+    }
+    println("Reverse of $dummy is: $rev");
+
+    // 6. Java Program to Check Palindrome
+    var rem2=0
+    var rev2=0
+    var dummy2=0;
+    var orgNo2=121;
+    dummy2=orgNo2;
+    while(orgNo2!=0)
+    {
+        rem2=orgNo2%10;
+        rev2=(rev2*10)+rem2;
+        orgNo2=orgNo2/10;
+    }
+    if(dummy2 == rev2) println("Palindrome: $rev2")
+    else println("Not Palindrome: $rev2")
+
+    // 7. Java Program to Check Armstrong Number
+    var rem3=0
+    var rev3=0
+    var dummy3=0;
+    var sum=0;
+    println("Enter number to find armstrong or not");
+    var orgNo3=sc.nextInt();
+    dummy3=orgNo3;
+    while(orgNo3!=0)
+    {
+        rem3=orgNo3%10;
+        sum=sum+(rem3*rem3*rem3);
+        rev3=(rev3*10)+rem3;
+        orgNo3=orgNo3/10;
+    }
+    if(dummy3 == sum) println("Armstrong: $sum")
+    else println("Not Armstrong: $sum")
+
+    // 8. Java Program to Display Factors of a Number
+    println("Enter a number for finding factors: ");
+    val factNo=sc.nextInt();
+    println("Factors of number $factNo");
+    for (z in 1..factNo)
+    {
+        if(factNo%z == 0)  println(z);
+    }
+
+    //9
+    var arr1=arrayOf(1,2,3,4,5)
+        var scanner=Scanner(System.`in`);
+        println("Enter a number to search");
+        var search = scanner.nextInt();
+        var found=false;
+        for (i in 0..arr1.size) {
+            if(arr1[i]==search)
+            {
+                found=true;
+                break;
+            }
+            else
+            {
+                found=false;
+            }
+        }
+        if (found) {
+            println("Found");
+        }
+        else{
+            println("not found");
+        }
